@@ -26,7 +26,7 @@ class App extends Component {
             return (
                 <div key={user.id}>
                     <p>Name: {user.fname}</p>
-                    <p>Quote: {user.quote}</p>
+                    <p>Email: {user.email}</p>
                 </div>
             );
         });
