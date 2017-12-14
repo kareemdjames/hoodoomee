@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20171213194430) do
     t.string "ig"
     t.integer "likes"
     t.integer "barbershop_id"
+    t.integer "user_queue_id"
+    t.integer "favorite_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 20171213194430) do
     t.integer "phone"
     t.integer "like"
     t.string "pic"
+    t.integer "barber_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,6 +74,7 @@ ActiveRecord::Schema.define(version: 20171213194430) do
     t.string "state"
     t.integer "zip"
     t.string "photo"
+    t.integer "user_queue_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
