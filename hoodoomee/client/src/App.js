@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link, Redirect, Route } from 'react-router-dom'
+import Navigation from './components/Nav'
 import Auth from './Auth/Auth.js';
 import './App.css';
 
@@ -9,7 +11,7 @@ class App extends Component {
             userData: null,
             userDataReceived: false,
         };
-
+    // auth stuff
     // const auth = new Auth();
     // auth.login();
     }
@@ -51,13 +53,17 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <h1>I Am In React</h1>
-                { (this.state.userDataReceived)
-                    ? this.renderUsers()
-                    : <p>Loading...</p>
-                }
-            </div>
+            <Router>
+                <div className="App">
+                    <Navigation />
+                    <h1>I Am In React</h1>
+                    { (this.state.userDataReceived)
+                        ? this.renderUsers()
+                        : <p>Loading...</p>
+                    }
+                    <Route exact path='/test' render={ ()=> <h1>Hello</h1>} />
+                </div>
+            </Router>
         );
     }
 }
