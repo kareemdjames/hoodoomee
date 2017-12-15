@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Redirect, Route } from 'react-router-dom
 import Navigation from './components/Nav'
 import Auth from './Auth/Auth.js';
 import './App.css';
+import UserDash from "./components/UserDashboard";
 
 class App extends Component {
     constructor() {
@@ -61,6 +62,7 @@ class App extends Component {
                         ? this.renderUsers()
                         : <p>Loading...</p>
                     }
+                    <Route path='/userdash' component={UserDash} />
                     <Route exact path='/test' render={ ()=> <h1>Hello</h1>} />
                 </div>
             </Router>

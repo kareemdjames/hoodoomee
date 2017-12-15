@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Hero, Container, Title, Tabs, Notification, Button } from 'reactbulma'
+import { Hero, Container, Title, Tabs } from 'reactbulma'
 
 
 function Navigation (props) {
@@ -38,20 +38,6 @@ function Navigation (props) {
                     </Tabs>
                 </Hero.Foot>
             </Hero>
-            <Container fluid>
-                <Notification>
-                    This container is <strong>fluid</strong>: it will have a 20px gap on either side, on any viewport size.
-                </Notification>
-            </Container>
-            <div>
-                <Button as="a" success large fullwidth>
-                    Search for a Barber
-                </Button>
-                <br/>
-                <Button as="a" success large fullwidth>
-                    Favorites
-                </Button>
-            </div>
         </div>
     )
 }
