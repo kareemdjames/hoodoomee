@@ -8,14 +8,14 @@ function Navigation (props) {
         <div>
             <Hero small dark bold>
                 <Hero.Body>
-                    <Container>
+                    <Container hasTextCentered>
                         <Title>
                             HooDooMee
                         </Title>
                     </Container>
                 </Hero.Body>
                 <Hero.Foot>
-                    <Tabs>
+                    <Tabs centered>
                         <Container>
                             <ul>
                                 <Link to='/'>

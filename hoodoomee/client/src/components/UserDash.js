@@ -14,7 +14,7 @@ class UserDash extends Component {
 
     render() {
         return (
-            <Section small>
+            <Section style={{paddingTop:20}}>
                 <Container fluid style={{height: 300}}>
                     <Map
                         onMapReady={map => {

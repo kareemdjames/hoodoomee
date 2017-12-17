@@ -4,6 +4,7 @@ import Navigation from './components/Nav'
 import Auth from './Auth/Auth.js';
 import './App.css';
 import UserDash from './components/UserDash';
+import Search from './components/Search'
 
 class App extends Component {
     constructor() {
@@ -58,6 +59,7 @@ class App extends Component {
                 <div className="App">
                     <Navigation />
                     <Route path='/userdash' component={UserDash} />
+                    <Route path='/Search' component={Search} />
                 </div>
             </Router>
         );
