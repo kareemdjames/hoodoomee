@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Redirect, Route } from 'react-router-dom
 import Navigation from './components/Nav'
 import Auth from './Auth/Auth.js';
 import './App.css';
-import UserDash from "./components/UserDash";
+import UserDash from './components/UserDash';
 
 class App extends Component {
     constructor() {

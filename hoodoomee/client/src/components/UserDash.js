@@ -1,26 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Map from './Map'
 import { Link } from 'react-router-dom'
-import { Container, Notification, Button, Section } from 'reactbulma'
+import { Container, Button, Section } from 'reactbulma'
 
-function UserDash (props) {
-    return (
-        <Section>
-            <Container fluid>
-                <Notification>
-                    This container is <strong>fluid</strong>: it will have a 20px gap on either side, on any viewport size.
-                </Notification>
-            </Container>
-            <Section>
-                <Button as="a" success large fullwidth>
-                    Search for a Barber
-                </Button>
-                <br/>
-                <Button as="a" success large fullwidth>
-                    Favorites
-                </Button>
+class UserDash extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            map: null
+        }
+    }
+
+    render() {
+        return (
+            <Section small>
+                <Container fluid style={{height: 300}}>
+                    <Map
+                        onMapReady={map => {
+                            if (this.state.map == null)
+                                return
+                            this.setState({map})
+                        }}
+                        zoom={14}
+                        center={{lat: 40.7224017, lng: -73.9896719}}
+                        containerElement={<div style={{height: 100 + '%'}}/>}
+                        mapElement={<div style={{height: 100 + '%'}}/>}
+                    />﻿
+                </Container>
+                <Section small>
+                    <Button as="a" success large fullwidth>
+                        Search for a Barber
+                    </Button>
+                    <br/>
+                    <Button as="a" success large fullwidth>
+                        Favorites
+                    </Button>
+                </Section>
             </Section>
-        </Section>
-    )
+        )
+    }
 }
 
 export default UserDash
