@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Notification, Button } from 'reactbulma'
+import { Container, Notification, Button, Section } from 'reactbulma'
 
 function UserDash (props) {
     return (
-        <div>
+        <Section>
             <Container fluid>
                 <Notification>
                     This container is <strong>fluid</strong>: it will have a 20px gap on either side, on any viewport size.
                 </Notification>
             </Container>
-            <div>
+            <Section>
                 <Button as="a" success large fullwidth>
                     Search for a Barber
                 </Button>
@@ -18,8 +18,8 @@ function UserDash (props) {
                 <Button as="a" success large fullwidth>
                     Favorites
                 </Button>
-            </div>
-        </div>
+            </Section>
+        </Section>
     )
 }
 
