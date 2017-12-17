@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Redirect, Route } from 'react-router-dom'
-import Navigation from './components/Nav'
+import { BrowserRouter as Router, Link, Redirect, Route, Switch } from 'react-router-dom'
 import Auth from './Auth/Auth.js';
 import './App.css';
 import UserDash from './components/UserDash';
 import Search from './components/Search'
+import Home from './components/Home'
 
 class App extends Component {
     constructor() {
@@ -57,9 +57,12 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <Navigation />
-                    <Route path='/userdash' component={UserDash} />
-                    <Route path='/Search' component={Search} />
+
+                        <Route exact path='/' component={Home}/>
+
+                        <Route path='/userdash' component={UserDash} />
+                        <Route path='/search' component={Search} />
+
                 </div>
             </Router>
         );
