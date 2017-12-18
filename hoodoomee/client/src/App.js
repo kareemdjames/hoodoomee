@@ -1,35 +1,17 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link, Redirect, Route, Switch } from 'react-router-dom'
-import Auth from './Auth/Auth.js';
+import { BrowserRouter as Router, Route, } from 'react-router-dom'
 import './App.css';
-import UserDash from './components/UserDash';
-import Search from './components/Search'
 import Home from './components/Home'
 
 class App extends Component {
-    constructor() {
-        super();
+
+    constructor(props) {
+        super(props);
         this.state = {
             userData: null,
             userDataReceived: false,
         };
-    // auth stuff
-    // const auth = new Auth();
-    // auth.login();
     }
-
-    goTo(route) {
-        this.props.history.replace(`/${route}`)
-    }
-
-    login() {
-        this.props.auth.login();
-    }
-
-    logout() {
-        this.props.auth.logout();
-    }
-
 
     componentDidMount() {
         fetch('/users')
@@ -55,18 +37,12 @@ class App extends Component {
 
     render() {
         return (
-            <Router>
-                <div className="App">
+            <div>
 
-                        <Route exact path='/' component={Home}/>
-
-                        <Route path='/userdash' component={UserDash} />
-                        <Route path='/search' component={Search} />
-
-                </div>
-            </Router>
+            </div>
         );
     }
 }
 
 export default App;
+

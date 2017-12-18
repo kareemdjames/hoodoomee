@@ -18,7 +18,7 @@ function Navigation (props) {
                     <Tabs centered>
                         <Container>
                             <ul>
-                                <Link to='/'>
+                                <Link to='/home'>
                                     <li className="active">Home</li>
                                 </Link>
                                 <Link to='/search'>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Map from './Map'
 import Navigation from './Nav'
-import { Link } from 'react-router-dom'
 import { Container, Button, Section } from 'reactbulma'
 
 class UserDash extends Component {

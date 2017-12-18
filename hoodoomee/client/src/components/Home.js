@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Section, Container, Content, Title, SubTitle, Button } from 'reactbulma'
-import UserDash from "./UserDash";
-
-
 
 class Home extends Component {
+
     login() {
         this.props.auth.login();
     }
@@ -14,7 +12,7 @@ class Home extends Component {
     }
 
     goTo(route) {
-        this.props.history.replace(`/${UserDash}`)
+        this.props.history.replace(`/${route}`)
     }
 
     render() {
@@ -44,7 +42,7 @@ class Home extends Component {
                                 <Button black onClick={this.logout.bind(this)}>Log Out</Button>
                             )
                         }
-                        <Button black onClick={this.goTo.bind(this, 'home')}>UserDash</Button>
+                        <Button black onClick={this.goTo.bind(this, 'userdash')}>UserDash</Button>
                     </Container>
                 </Section>
                 <Section>
