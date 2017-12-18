@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Hero, Container, Title, Tabs } from 'reactbulma'
 
 
-function Navigation (props) {
+function Navigation () {
     return (
         <div>
             <Hero small dark bold>
@@ -27,7 +27,7 @@ function Navigation (props) {
                                 <Link to='/bookings'>
                                     <li>Bookings</li>
                                 </Link>
-                                <Link to='/favorties'>
+                                <Link to='/favorites'>
                                     <li>Favorites</li>
                                 </Link>
                                 <Link to='/settings'>
