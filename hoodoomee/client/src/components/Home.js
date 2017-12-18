@@ -31,6 +31,7 @@ class Home extends Component {
                 </Section>
                 <Section>
                     <Container hasTextCentered>
+                        <Button black onClick={this.goTo.bind(this, 'userdash')}>UserDash</Button>
                         {
                             !isAuthenticated() && (
                                 <Button black onClick={this.login.bind(this)}>Log In</Button>
@@ -42,7 +43,6 @@ class Home extends Component {
                                 <Button black onClick={this.logout.bind(this)}>Log Out</Button>
                             )
                         }
-                        <Button black onClick={this.goTo.bind(this, 'userdash')}>UserDash</Button>
                     </Container>
                 </Section>
                 <Section>
