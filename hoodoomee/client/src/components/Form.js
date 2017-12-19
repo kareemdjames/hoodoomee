@@ -25,7 +25,7 @@ function Form() {
                 <Control hasIconsLeft>
                     <Input type='text' placeholder='UserName' />
                     <Icon left>
-                        <i className="fa fa-user"/>
+                        <i className="fa fa-user" />
                     </Icon>
                 </Control>
             </Field>
@@ -35,7 +35,7 @@ function Form() {
                     <Input type='text' placeholder='Email'/>
                 </Control>
             </Field>
-            <Button warning>Update</Button>
+            <Button warning>Update Account</Button>
             <br/>
             <br/>
             <Button danger>Delete Account</Button>

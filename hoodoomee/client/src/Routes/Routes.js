@@ -7,7 +7,8 @@ import UserDash from "../components/UserDash";
 import Favorite from '../components/Favorite';
 import Booking from '../components/Booking';
 import Barber from '../components/Barber';
-import Setting from '../components/Setting'
+import Setting from '../components/Setting';
+import BarberShop from '../components/Barbershop'
 import Callback from '../Callback/Callback';
 import Auth from '../Auth/Auth';
 import history from '../history';
@@ -31,6 +32,7 @@ export const makeMainRoutes = () => {
                 <Route path='/bookings' render={(props) => <Booking auth={auth} {...props} />} />
                 <Route path='/favorites' render={(props) => <Favorite auth={auth} {...props} />} />
                 <Route path='/barber' render={(props) => <Barber auth={auth} {...props} />} />
+                <Route path='/barbershop' render={(props) => <BarberShop auth={auth} {...props} />} />
                 <Route path='/settings' render={(props) => <Setting auth={auth} {...props} />} />
                 <Route path="/callback" render={(props) => {
                     handleAuthentication(props);
