@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Map from './Map'
 import Navigation from './Nav'
 import { Container, Button, Section } from 'reactbulma'
@@ -31,13 +32,17 @@ class UserDash extends Component {
                         />﻿
                     </Container>
                     <Section small>
-                        <Button as="a" success large fullwidth>
-                            Search for a Barber
-                        </Button>
+                        <Link to='/search'>
+                            <Button success large fullwidth>
+                                Search for a Barber
+                            </Button>
+                        </Link>
                         <br/>
-                        <Button as="a" success large fullwidth>
-                            Favorites
-                        </Button>
+                        <Link to='/favorites'>
+                            <Button success large fullwidth>
+                                Favorites
+                            </Button>
+                        </Link>
                     </Section>
                 </Section>
             </div>

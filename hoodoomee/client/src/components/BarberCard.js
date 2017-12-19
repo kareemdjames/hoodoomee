@@ -1,11 +1,12 @@
 import React from 'react'
-import { Section, Media, Image, Content, Level, Button, Container} from 'reactbulma'
+import { Section, Media, Image, Content, Level, Container, Box } from 'reactbulma'
 
 function BarberCard() {
 
     return (
         <Section>
             <Container>
+                <Box>
                 <Media>
                     <Media.Left>
                         <Image is='64x64' src='http://bulma.io/images/placeholders/128x128.png' />
@@ -18,13 +19,16 @@ function BarberCard() {
                         <Level mobile>
                             <Level.Left>
                                 <Level.Item>
-                                    <Button info small>Profile</Button>
+                                    <Content>
+                                        <p>Catch the best fade in the city!!</p>
+                                    </Content>
                                 </Level.Item>
                             </Level.Left>
                         </Level>
                         </Content>
                     </Media.Content>
                 </Media>
+                </Box>
             </Container>
         </Section>
     )
