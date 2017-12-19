@@ -42,7 +42,6 @@ function Barber() {
                     </Level.Right>
                 </Level>
             </Section>
-
         </div>
     )
 }
